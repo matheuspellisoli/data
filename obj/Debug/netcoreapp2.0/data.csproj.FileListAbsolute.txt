@@ -8,3 +8,13 @@
 /home/matheus/projetos/desafio2/data/obj/Debug/netcoreapp2.0/data.AssemblyInfo.cs
 /home/matheus/projetos/desafio2/data/obj/Debug/netcoreapp2.0/data.dll
 /home/matheus/projetos/desafio2/data/obj/Debug/netcoreapp2.0/data.pdb
+/home/matheus/projetos/data/bin/Debug/netcoreapp2.0/data.deps.json
+/home/matheus/projetos/data/bin/Debug/netcoreapp2.0/data.runtimeconfig.json
+/home/matheus/projetos/data/bin/Debug/netcoreapp2.0/data.runtimeconfig.dev.json
+/home/matheus/projetos/data/bin/Debug/netcoreapp2.0/data.dll
+/home/matheus/projetos/data/bin/Debug/netcoreapp2.0/data.pdb
+/home/matheus/projetos/data/obj/Debug/netcoreapp2.0/data.csproj.CoreCompileInputs.cache
+/home/matheus/projetos/data/obj/Debug/netcoreapp2.0/data.AssemblyInfoInputs.cache
+/home/matheus/projetos/data/obj/Debug/netcoreapp2.0/data.AssemblyInfo.cs
+/home/matheus/projetos/data/obj/Debug/netcoreapp2.0/data.dll
+/home/matheus/projetos/data/obj/Debug/netcoreapp2.0/data.pdb

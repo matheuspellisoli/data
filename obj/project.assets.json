@@ -12540,11 +12540,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/matheus/projetos/desafio2/data/data.csproj",
+      "projectUniqueName": "/home/matheus/projetos/data/data.csproj",
       "projectName": "data",
-      "projectPath": "/home/matheus/projetos/desafio2/data/data.csproj",
+      "projectPath": "/home/matheus/projetos/data/data.csproj",
       "packagesPath": "/home/matheus/.nuget/packages/",
-      "outputPath": "/home/matheus/projetos/desafio2/data/obj/",
+      "outputPath": "/home/matheus/projetos/data/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
