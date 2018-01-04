@@ -72,7 +72,7 @@ namespace data.Models
         }
         public  Boolean  validateDate (){
            
-            Regex dateRule = new Regex(@"^(\d{2}|\d)\D(\d{2}|\d)\D(\d{4}) (\d{2}|\d):(\d{2}|\d)$");
+            Regex dateRule = new Regex(@"^(\d{2}|\d)\D(\d{2}|\d)\D(\d{4}) (\d{2}|\d):(\d{2}|\d)$");//expressão regular 
 
             if(dateRule.IsMatch(this.GetStringDate())){
                 return true;
@@ -86,7 +86,7 @@ namespace data.Models
             String _stringDate = this.GetStringDate();
             String expression = @"^(\d{2}|\d)\D(\d{2}|\d)\D(\d{4}) (\d{2}|\d):(\d{2}|\d)$";            
             if(this.validateDate()){
-            Match match = Regex.Match(_stringDate,expression);
+            Match match = Regex.Match(_stringDate,expression);//separa a string em 5 grupos determinado na  expressão regular 
             this.SetDay(Int32.Parse(match.Groups[1].Value));
             this.SetMonth(Int32.Parse(match.Groups[2].Value));
             this.SetYear(Int32.Parse(match.Groups[3].Value));
@@ -102,7 +102,7 @@ namespace data.Models
 
         public int HowManyDay(int month){
 
-            int[] months = new int[] { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+            int[] months = new int[] { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};// quantos dias tem cada mês 
 
             return months[month];
         }

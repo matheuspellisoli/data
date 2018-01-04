@@ -10,12 +10,11 @@ namespace data.Controllers
 
     public class DateController : Controller{
     
-             static Date _data = new Date();
-
-     
-     static int ini = 0;
+    static Date _data = new Date();
+  
+   static Boolean ini = false; // 
     public DateController(){
-        if(ini == 0 ){
+        if(!ini){ // caso seja false ele set uma data padrão 
         _data.SetStringDate("01/01/1917 04:00");
         _data.ConvertStringToDate();
         }
@@ -25,7 +24,7 @@ namespace data.Controllers
     }
     [HttpGet]
     public ActionResult GetAll(){   
-        ini = 1;         
+        ini = true; // informa que já foi executado       
          if(!_data.validateDate()){
              return StatusCode(500);
              }
@@ -35,17 +34,15 @@ namespace data.Controllers
         
         
         [HttpPut]
-        
-        public IActionResult update( PutChange obj){
-           
+        public IActionResult update( String date, long value, char op  ){            
             
-            if(obj.date == null){
+            if(date == null){
                 return StatusCode(500);
             }
 
-            _data.SetStringDate(obj.date);
+            _data.SetStringDate(date);
             _data.ConvertStringToDate();
-            _data.ChangeDate(obj.op ,obj.value);
+            _data.ChangeDate(op ,value);
                                    
             return new ObjectResult(_data);   
         }
@@ -53,53 +50,3 @@ namespace data.Controllers
 
 }
  
-/*
-
-     static Date _data = new Date();
-
-     date.Models.
-     static int ini = 0;
-    public DateController(){
-        if(ini == 0 ){
-        _data.SetStringDate("01/01/1917 04:00");
-        _data.ConvertStringToDate();
-        }
-        
-        
-        
-    }
-    [HttpGet]
-    public ActionResult GetAll(){   
-        ini = 1;         
-         if(!_data.validateDate()){
-             return StatusCode(500);
-             }
-          
-          return new ObjectResult(_data);
-        }
-        
-        
-        [HttpPut]
-        
-        public IActionResult update( PutChange obj){
-           Console.WriteLine( obj.value);
-            Console.WriteLine("1 - " + obj.date);
-            if(obj.date == null){
-                return StatusCode(500);
-            }
-            _data.SetStringDate(obj.date);
-            _data.ConvertStringToDate();
-            Console.WriteLine("2 - " + _data.GetDay());
-            _data.ChangeDate(obj.op, obj.value);
-            
-            Console.WriteLine("2 - " + _data.GetDay());
-            Console.WriteLine("3 - " + _data.GetStringDate());
-            return new ObjectResult(_data);   
-        }
-    
-
-
-
- */
-    
-  

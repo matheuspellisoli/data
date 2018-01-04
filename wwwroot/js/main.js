@@ -65,7 +65,7 @@ $(document).ready(function(){
                 },
                 data:  {
                     date: $("#date").val(),
-                    op: $("#op").val(),
+                    op: "+",
                     value: $("#value").val()
                 },                
               });
@@ -75,24 +75,3 @@ $(document).ready(function(){
 
     });
 });
-
-/*
- date:$("#date").val() + " " + $("#time").val(), 
-                    op: $("#op").val(),
-                    value: $("#value").val()
-
-
-                            $.ajax({
-            url: '../api/changedate/?newDate=' + newDate + "&op=" + op + "&value=" + value,
-            type: 'PUT',
-            dataType: 'json',
-            success: function (data) {
-                $.each(data, function (key, item) {
-                    document.getElementById("system-date").innerHTML = formatItem(item);
-                });
-            },
-            error: function (errorThrown) {
-                console.log('Erro.');
-            }
-});
-*/
