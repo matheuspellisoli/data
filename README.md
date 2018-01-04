@@ -1,4 +1,4 @@
-# Desafio RedeHot
+# Desafio RedeHots
 
 API foi idealizada utilizando  C# e o frameower ASP .NET CORE 2
 
