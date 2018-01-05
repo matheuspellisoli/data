@@ -12,7 +12,7 @@ Link para realizar um get na API da biblioteca é http://`< hostname >`/api/date
 ## PUT 
 Link para realizar um PUT na API da biblioteca é http://`< hostname >`/api/date/
 Deve ser passado na URL os valores para a Alteração ficando 
- http://`< hostname >`/api/date/?date=`< Data(dd/mm/aaaa hh:mm) > ` &op= `< - ou + (+ = %2B)>` &value=`< numero Ex: 4000>`.
+ http://`< hostname >`/api/date/?date=`< Data(dd/mm/aaaa hh:mm) > ` &op= `< - ou + (+ = %2B)>` &value=`< numero Ex: 4000>`
 ## Retorno da data 
 Ele retorna um Json
 
