@@ -130,7 +130,7 @@ namespace data.Models
               if(this.GetMonth() == 12 ){
                    this.SetMonth(1);
                    this.SetYear(this.GetYear() + 1);
-               }else if(this.GetDay() == HowManyDay(this.GetMonth())){
+               }else if(this.GetDay() == HowManyDay(this.GetMonth())){ //verifica quantos dias tem o mês 
                     this.SetDay(1);
                     this.SetMonth(this.GetMonth() + 1);
                }else if(this.GetHour() == 24 ){

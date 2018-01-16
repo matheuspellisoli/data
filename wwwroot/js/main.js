@@ -4,6 +4,7 @@ function setDateTime(){
         $("#Labeldate").append(data.stringDate);
         $("#date").val(data.day + "/" + data.month + "/" + data.year) 
         $("#time").val(data.hour+":"+data.minute) 
+        
 });
 
 
@@ -47,31 +48,32 @@ $(document).ready(function(){
             $("#time").removeClass("erro");
             $("#op").removeClass("erro");
             $("#value").removeClass("erro");
-            
-            $.ajax({
-                url: "http://localhost:5000/api/date/?date="+$("#date").val() +" "+ $("#time").val()  +"&op="+$("#op").val()+"&value="+$("#value").val(),
-                type: 'put',
-                contentType: "application/json; charset=utf-8",
-                Accept: 'application/json',
-                dataType: 'json',
-                headers: {
-                    "Content-Type":"application/json"
-                   },
-                success: function(data){
-                    setDateTime(); 
-                },
-                error : function(err) {
-                    console.log(err)
-                },
-                data:  {
-                    date: $("#date").val(),
-                    op: "+",
-                    value: $("#value").val()
-                },                
-              });
-            
-        }
-       
+           console.log(JSON.stringify({  
+            date: $("#date").val(),
+            op: "+",
+            value: $("#value").val()
+        }))
 
+           $.ajax({
+                  url: "http://localhost:5000/api/date",
+                  type: 'put',
+                async: false,
+                contentType: 'application/json; charset=utf-8',
+                  headers: {
+                      "Content-Type":"application/json"
+                     },
+                  success: function(data){
+                      setDateTime(); 
+                  },
+                  error : function(err) {
+                      console.log(err)
+                  },
+                  data: JSON.stringify({
+                    date: $("#date").val(),
+                    op: $("#op").val(),
+                    value: $("#value").val()                
+                  })                                 
+                })            
+        }     
     });
 });

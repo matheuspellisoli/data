@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System;
 using data.Models;
-
+using Newtonsoft.Json;
 
 namespace data.Controllers
 {
@@ -32,21 +32,18 @@ namespace data.Controllers
           return new ObjectResult(_data);
         }
         
-        
+        [Produces("application/json")]
         [HttpPut]
-        public IActionResult update( String date, long value, char op  ){            
-            
-            if(date == null){
+        
+        public ActionResult update([FromBody]  DateOperetion obj)
+        {
+            if(obj.date == null){
                 return StatusCode(500);
             }
-
-            _data.SetStringDate(date);
-            _data.ConvertStringToDate();
-            _data.ChangeDate(op ,value);
-                                   
-            return new ObjectResult(_data);   
+            _data.SetStringDate(obj.date);// altera a data 
+            _data.ConvertStringToDate(); // converte para o objeto data  
+            _data.ChangeDate(obj.op ,obj.value);
+            return new ObjectResult(_data);
         }
     }
-
-}
- 
+    }
