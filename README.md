@@ -11,8 +11,20 @@ Link para realizar um get na API da biblioteca é http://`< hostname >`/api/date
 
 ## PUT 
 Link para realizar um PUT na API da biblioteca é http://`< hostname >`/api/date/
-Deve ser passado na URL os valores para a Alteração ficando 
- http://`< hostname >`/api/date/?date=`< Data(dd/mm/aaaa hh:mm) > ` &op= `< - ou + (+ = %2B)>` &value=`< numero Ex: 4000>`
+Deve ser passado na pelo formbody o Json
+
+```javascript
+{ 
+  date: "1/1/1917 4:0",
+  op: "-",
+   value: "6" 
+}
+```
+
+###Curl
+
+curl -X PUT \http://localhost:5000/api/date/ -s -w '%{http_code}\n' -d '{ date: "1/1/1917 4:0", op: "+", value: "7" }' -H "Content-Type: application/json" 
+
 ## Retorno da data 
 Ele retorna um Json
 
@@ -30,3 +42,4 @@ Ele retorna um Json
 
 #### HTTP Status Code 500
   Quando retornar verifique se informou a data no formato coreto(dd/mm/aaaa hh:mm)
+

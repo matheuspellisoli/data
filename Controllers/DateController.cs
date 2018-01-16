@@ -37,9 +37,13 @@ namespace data.Controllers
         
         public ActionResult update([FromBody]  DateOperetion obj)
         {
+           
             if(obj.date == null){
                 return StatusCode(500);
+            }else if (obj.date == "now"){
+                obj.date = _data.GetStringDate();
             }
+            
             _data.SetStringDate(obj.date);// altera a data 
             _data.ConvertStringToDate(); // converte para o objeto data  
             _data.ChangeDate(obj.op ,obj.value);
