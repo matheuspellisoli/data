@@ -25,7 +25,7 @@ namespace data.Controllers
     [HttpGet]
     public ActionResult GetAll(){   
         ini = true; // informa que já foi executado       
-         if(!_data.validateDate()){
+         if(! Date.validateDate(_data.GetStringDate())){
              return StatusCode(500);
              }
           
@@ -38,10 +38,10 @@ namespace data.Controllers
         public ActionResult update([FromBody]  DateOperetion obj)
         {
            
-            if(obj.date == null){
-                return StatusCode(500);
-            }else if (obj.date == "now"){
+           if (obj.date == "now"){
                 obj.date = _data.GetStringDate();
+            }else if(obj.date == null || !Date.validateDate(_data.GetStringDate())){
+                return StatusCode(500);
             }
             
             _data.SetStringDate(obj.date);// altera a data 

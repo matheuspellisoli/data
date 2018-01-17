@@ -70,11 +70,11 @@ namespace data.Models
         public void SetStringDate(String stringDate){
              this.stringDate = stringDate;
         }
-        public  Boolean  validateDate (){
+        public static  Boolean  validateDate (string date){
            
             Regex dateRule = new Regex(@"^(\d{2}|\d)\D(\d{2}|\d)\D(\d{4}) (\d{2}|\d):(\d{2}|\d)$");//expressão regular 
 
-            if(dateRule.IsMatch(this.GetStringDate())){
+            if(dateRule.IsMatch(date)){
                 return true;
             }
 
@@ -85,7 +85,7 @@ namespace data.Models
         public void ConvertStringToDate(){
             String _stringDate = this.GetStringDate();
             String expression = @"^(\d{2}|\d)\D(\d{2}|\d)\D(\d{4}) (\d{2}|\d):(\d{2}|\d)$";            
-            if(this.validateDate()){
+            if(validateDate(this.GetStringDate())){
             Match match = Regex.Match(_stringDate,expression);//separa a string em 5 grupos determinado na  expressão regular 
             this.SetDay(Int32.Parse(match.Groups[1].Value));
             this.SetMonth(Int32.Parse(match.Groups[2].Value));
