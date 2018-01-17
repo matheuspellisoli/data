@@ -37,7 +37,7 @@ namespace data.Controllers
         
         public ActionResult update([FromBody]  DateOperetion obj)
         {
-           
+           ini = true; 
            if (obj.date == "now"){
                 obj.date = _data.GetStringDate();
             }else if(obj.date == null || !Date.validateDate(_data.GetStringDate())){
