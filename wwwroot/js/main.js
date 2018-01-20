@@ -55,7 +55,7 @@ $(document).ready(function(){
         }))
 
            $.ajax({
-                  url: "http://localhost:5000/api/date",
+                  url: "/api/date",
                   type: 'put',
                 async: false,
                 contentType: 'application/json; charset=utf-8',
