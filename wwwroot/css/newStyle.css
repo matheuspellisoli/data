@@ -1,0 +1,129 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(37, 37, 37, 0.774);
+    background-color: rgba(243, 243, 243, 0.336);
+    
+}
+a, a:active, a:visited{
+    color: rgba(37, 37, 37, 0.774);
+    text-decoration: underline ; 
+}
+p, h1{
+    text-align: center;
+}
+.boxMain{
+ margin-top: 2%;
+ 
+}
+.fontDate{
+    font-size: 40px;    
+    padding: 2px;   
+    text-decoration-line:  unset;   
+    text-align: center;
+}
+.formDate{
+    display: block;
+    position:absolute;
+    left:50%;
+    margin-left:-110px;
+    
+}
+.row{
+    width: 200px;
+    margin-top: 2px;
+    color: black;
+}
+.row > input{
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+.label{
+    margin: 2px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.664);
+    
+}
+.error{
+    text-align: left;
+    color: rgb(165, 43, 43);
+    border-color: rgb(182, 27, 27);
+}
+
+
+.toggle{
+    margin-left: 20%;   
+    width: 60%;
+    background-color: #fff;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    
+}
+
+.button{
+    width: 50px;
+    height: 15px;
+    background-color: #555753;
+    border-radius: 5px;
+    margin: 2px 5px;
+    color: #fff;
+   
+}
+.toggleLeft{
+    float: left;
+    display: table-cell;
+    line-height: 1;    
+    text-align: center;
+}
+
+.toggleRight{
+    float: right;
+    display: table-cell;
+    line-height: 1;    
+    text-align: center;
+}
+
+
+.textLabel{
+    text-align: left;
+}
+
+.buttonStyle{
+    margin-top: 5px;
+    width: 80px;
+    height: 30px;
+    margin-left: 10px;
+    border: none;
+}
+
+.clear{
+    background-color:  #BB342E;
+    color: #fff;
+}
+.clear:hover{
+    background-color:  #972621;
+}
+.calculate{
+    background-color:  #378C17;
+    color: #fff;
+}
+
+.calculate:hover{
+    background-color:  #2D7F0F;
+}
+
+.toggleLabelHiden{
+    float: right;
+    margin-right: 20px;
+    color: #ccc;
+}
