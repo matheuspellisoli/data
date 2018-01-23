@@ -6,11 +6,11 @@ API foi idealizada utilizando  C# e o frameower ASP .NET CORE 2
 Os valores de estiverem entre `<>` devem ser alterados para os valores de sua preferência  
 ## GET
 
-Link para realizar um get na API da biblioteca é http://`< hostname >`/api/date
+Link para realizar um get na API da biblioteca é http://`desafio-redehost.herokuapp.com`/api/date
 
 
 ## PUT 
-Link para realizar um PUT na API da biblioteca é http://`< hostname >`/api/date/
+Link para realizar um PUT na API da biblioteca é http://`desafio-redehost.herokuapp.com`/api/date/
 Deve ser passado na pelo formbody o Json
 
 ```javascript
@@ -23,7 +23,7 @@ Deve ser passado na pelo formbody o Json
 
 ### Curl
 
-curl -X PUT \http://`< hostname >`/api/date/ -s -w '%{http_code}\n' -d '{ date: "1/1/1917 4:0", op: "+", value: "7" }' -H "Content-Type: application/json" 
+curl -X PUT \http://`desafio-redehost.herokuapp.com`/api/date/ -s -w '%{http_code}\n' -d '{ date: "1/1/1917 4:0", op: "+", value: "7" }' -H "Content-Type: application/json" 
 
 ## Retorno da data 
 Ele retorna um Json
