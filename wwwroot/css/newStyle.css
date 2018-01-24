@@ -57,6 +57,7 @@ p, h1{
     text-align: left;
     color: rgb(165, 43, 43);
     border-color: rgb(182, 27, 27);
+    font-size: 9px;
 }
 
 
@@ -125,5 +126,5 @@ p, h1{
 .toggleLabelHiden{
     float: right;
     margin-right: 20px;
-    color: #ccc;
+    color: rgb(87, 87, 87);
 }

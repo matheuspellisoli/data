@@ -7,30 +7,90 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <link href="~/css/style.css" rel="stylesheet">
+        <link href="~/css/newStyle.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <title>calendarium</title>
     </head>
     <body>
+        <div class="boxMain">
+            <h1>Calendarium</h1>
+            <p class="description">
+            Calendarium é um aplicação feita por <a href="https://github.com/matheuspellisoli"  target=“_blank”>Matheus Pellisoli</a>.
+            <br> Nesta aplicação você pode somar ou subtrair minutos de uma data.
+            </p>
+        <div class="boxDate fontDate" id="dateLabel">
+            00/00/0000 00:00
+        </div>
+        <div class="formDate">
+            <div>
+                <div class="row label textLabel">
+                    Data:
+                </div>
+                <div class="row">
+                <input type="date" id="date" class="">
+                </div>
+                <div class="row error" id="errDate">
+                                      
+                </div>
+            </div>
+            
+            <div>
+                <div class="row label textLabel">
+                    Horário:
+                </div>
+                <div class="row">
+                <input type="text" id="hour" maxlength="5">
+                </div>
+                <div class="row error" id="errHour">
+                    
+                </div>
+            </div>
 
-        <div class="container">
 
-            <div><h1 class="font">API DATA</h1></div>
+            <div>
+                <div class="row label">
+                    Operação:
+                </div>
+                <div class="row">
+                 <input type="checkbox" style="display: none">
+                 <div class="toggle" id="toggleButton">
+                     <div class="button toggleLeft" id="Button">
+                         <label id="toggleLabel">+</label>
+                         <input type="hidden" value="+" id="toggleValue">
+                     </div>
+                     <label id="toggleLabelHiden" class="toggleLabelHiden">-</label>
+                      
+                 </div>                 
+                </div>
+                <div class="row error" id="errDate">
+                    
+                </div>
+            </div>
 
-            <div><p class="font date" id="Labeldate"> 26/03/98 23:58</p></div>
-            <div><p class="font pequena">Data</p></div>
+            <div>
+                <div class="row label textLabel">
+                    Minutos:
+                </div>
+                <div class="row">
+                <input type="text" id="minute">
+                </div>
+                <div class="row error" id="errMinute">
+                    
+                </div>
+            </div>
 
-            <input type="text" id="date" placeholder="35/09/1998">
-             <div><p class="font pequena">Hora</p></div>
-                <input type="text" id="time" placeholder="23:00">             
-            <div><p class="font pequena">Selecione uma operação que de seja</p></div>        
-            <select id="op">
-                <option value="+">Somar</option>
-                <option value="-">Subtrair</option>
-            </select>
-            <div><p class="font pequena">Value</p></div>
-            <input type="text" id="value" placeholder="4000">
-            <input type="submit" id="calcular" value="calcular">
+            <div>
+                <div class="row">
+                <button class="clear buttonStyle" id="clear">Limpar</button>
+                 <button class="calculate buttonStyle" id="calculate">Calcular</button>
+                </div>
+                
+                    
+                </div>
+            </div>
+        </div>
         </div>
 
-        <script src="~/js/main.js"></script>
+        <script src="~/js/script.js"></script>
     </body>
 </html>
