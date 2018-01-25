@@ -133,11 +133,11 @@ namespace data.Models
                }else if(this.GetDay() == HowManyDay(this.GetMonth())){ //verifica quantos dias tem o mês 
                     this.SetDay(1);
                     this.SetMonth(this.GetMonth() + 1);
-               }else if(this.GetHour() == 24 ){
+               }else if(this.GetHour() == 25 ){
                     this.SetHour(1);
                     this.SetDay(this.GetDay() + 1);
                }else if(this.GetMinute() == 60 ){
-                    this.SetMinute(1); 
+                    this.SetMinute(0); 
                     this.SetHour(this.GetHour() + 1);                    
                }
 

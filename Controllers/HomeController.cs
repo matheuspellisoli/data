@@ -15,10 +15,5 @@ namespace date.Controllers
             return View();
         }
         
-        [Route("/t")]
-        public IActionResult t_Index()
-        {
-            return View();
-        }
     }
 }
