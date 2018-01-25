@@ -89,10 +89,8 @@ function getdate(){
 }
 
 function getHour(){
-    var hour = $("#hour").val();
-    var expressionHour = /^([0-1]?[0-9]|2[0-3]):([0-5][0-9])$/
-
-        if(hour == "" && expressionHour.test(hour)){
+    
+        if(hour == ""){
             result = {
                 error : true,
                 value: null,
