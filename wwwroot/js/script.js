@@ -91,8 +91,9 @@ function getdate(){
 function getHour(){
 
     var hour = $("#hour").val();
-
-        if(hour == ""){
+    const regex = /^([0-9]|0[0-9]|1[0-9]|2[0-4]):([0-9]|[0-5][0-9])$/;
+    
+        if(hour == "" || !regex.exec(hour)){
             result = {
                 error : true,
                 value: null,
@@ -150,14 +151,14 @@ function getMinute(){
 }
 
 $("#hour").keyup(function(){ 
-
+    $(this).val(this.value.replace(/[a-z]|[A-Z]/, ''));
     var tecla = event.key;
     if(tecla != "Backspace"){
         if ($(this).val().length == 2){
             $(this).val($(this).val() + ":");
-        }                
+        }  
+       
         if(tecla >= 0 || tecla <= 9){
-        
         err = {
                 error : false,
                 value:  hour,
@@ -167,7 +168,6 @@ $("#hour").keyup(function(){
                 }
             }   
         }else{
-            console.log(tecla);
             err = {
                 error : true,
                 value: null,
@@ -187,9 +187,8 @@ $("#hour").keyup(function(){
         $("#errHour").text("");
     } 
 });
-
-$("#minute").keyup(function(){ 
-
+$('#minute').keyup(function() {
+    $(this).val(this.value.replace(/\D/, ''));
     var tecla = event.key;
 
 
@@ -242,8 +241,7 @@ $("#calculate").click(function(){
 
     var hour = getHour();
     
-
-    if(hour.error == false ){
+    if(hour.error == false){
         err = false;
         $("#errHour").text("");
     }else{
