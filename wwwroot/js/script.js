@@ -89,7 +89,9 @@ function getdate(){
 }
 
 function getHour(){
-    
+
+    var hour = $("#hour").val();
+
         if(hour == ""){
             result = {
                 error : true,
@@ -149,13 +151,12 @@ function getMinute(){
 
 $("#hour").keyup(function(){ 
 
-    var tecla = event.keyCode;
-    if(tecla != 8){
+    var tecla = event.key;
+    if(tecla != "Backspace"){
         if ($(this).val().length == 2){
             $(this).val($(this).val() + ":");
-        }        
-        
-        if(tecla > 47 && tecla < 58){
+        }                
+        if(tecla >= 0 || tecla <= 9){
         
         err = {
                 error : false,
@@ -189,9 +190,11 @@ $("#hour").keyup(function(){
 
 $("#minute").keyup(function(){ 
 
-    var tecla = event.keyCode;
-    if(tecla != 8){
-        if(tecla > 47 && tecla < 58){
+    var tecla = event.key;
+
+
+    if(tecla != "Backspace"){
+        if(tecla >= 0 || tecla <= 9){
         
         err = {
                 error : false,
