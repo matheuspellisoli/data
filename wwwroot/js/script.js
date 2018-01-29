@@ -274,7 +274,7 @@ $("#calculate").click(function(){
                 "Content-Type":"application/json"
                },
             success: function(data){
-                setValues(data); 
+                setValues(data)
             },
             error : function(err) {
                 console.log(err)
